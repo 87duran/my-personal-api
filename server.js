@@ -81,7 +81,9 @@ app.get('/skills', function(req, res) {
 	res.status(200).json(skillsToReturn);
 });
 app.post('/skills', function(req, res) {
-
+	var newSkill = req.body;
+	skills.push(newSkill);
+	res.status(200).json(newSkill);
 });
 
 
